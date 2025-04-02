@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: darkgray;
+}
+
+#form-container, #submitted-data {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 400px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center; /* Center the heading */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+label::before {
+    color: #28a745; /* Green color */
+    margin-right: 5px; /* Space between icon and label */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus, textarea:focus {
+    border-color: #28a745; /* Change border color on focus */
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #000201;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+button::after {
+    content: " ➤"; /* Arrow icon after the button text */
+    font-weight: bold; /* Make the arrow bold */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#submitted-data {
+    display: none; /* Initially hide submitted data */
+}
+
+#display-first-name,
+#display-last-name,
+#display-email,
+#display-message {
+    margin: 10px 0; /* Space between displayed data */
+}

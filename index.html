@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/images/css/style.css">
+    <link rel="stylesheet" href="assets/images/css/mobile.css">
+    <link rel="stylesheet" href="assets/images/css/tablet.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/images/scrip.js">
+</head>
+<body>
+
+    <!--header-->
+    <div class="header">
+        <div class="site-identity">
+            <img src="assets/images/images/logo.jpg" alt="site logo">
+            <h4>BALONGSKIE</h4>
+        </div>
+        <div class="menu-container">
+            <ul class="nav-menu">
+                <li><a href="#main-div">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#" onclick="signupAlert()">Works</a></li>
+                <li class="menu-btn"><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="burger-menu-btn">
+            <img src="assets/images/images/burger.png" alt="" onclick="toggleMenu()">
+        </div>
+    </div>
+
+    <p id="output"></p>
+
+    <!--Mobile Menu-->
+    <div class="menu-container-mobile">
+        <img class="close-btn" src="assets/images/images/close.png" alt="" onclick="toggleMenu()">
+        <ul class="nav-menu-mobile">
+            <li><a href="#main-div">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#">Works</a></li>
+            <li class="menu-btn"><a href="#">Hire Me</a></li>
+        </ul>
+    </div>
+
+    <!--hero/banner-->
+    <div id="main-div" class="hero">
+        <div style="position: relative;">
+            <img src="assets/images/images/img.jpg" alt="hero image">
+        </div>
+        <div class="hero-heading">
+            <h1>MICO UMPACAN</h1>
+            <p class="sub-heading">Discover My Expertise as a Full Stack Developer</p>
+            <div class="hero-button">
+                <button>Hire Me</button>
+                <button>Resume</button>
+            </div>
+            <p class="small-text">Crafting Innovative Digital Solutions for Your Business</p>
+        </div>
+    </div>
+
+    <div class="hero1" id="about">
+        <div style="position: relative;" class="hero-heading1">
+            <h1>About</h1>
+            <p class="sub-heading1">I'm Mico Umpacan, Balongskie for short. I am 18 years old. I lived in  Ibayo Tipas Taguig City. I want to be a pro player someday. I am friendly and kind person.I love playing mobile legends my hobbies are playing basketball playing online games,dancing and listening to  music. I gain achievements in school like tops. I must say that I'm different from them because im not like others, im not the person that start the fights I'm not bullying my classmates. Im the person that always happy.</p>
+        </div>
+        <div>
+            <img src="assets/images/images/img_carl.jpg" alt="hero car">
+        </div>
+    </div>
+
+    <div class="hero2" id="projects"> 
+        <div style="position: relative;">
+            <img src="assets/images/images/ml.jpg" alt="ml img">
+        </div>
+        <div>
+            <h1>Projects</h1>
+           <p>I love to play ml games and I also participate in tournaments at school and in the barangay with my friends of course we are the champion but just be humble so as not to be told that you are arrogant stay humble.</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu(){
+            document.querySelector(".menu-container-mobile").classList.toggle("active");
+        }
+
+function signupAlert() {
+alert("Welcome to JavaScript!");
+
+// Prompt for the user's name
+let name = prompt("What's your name?");
+
+if (name) {
+    // Ask for confirmation if they like JavaScript
+    let likesJS = confirm("Do you like JavaScript?");
+
+    // Update paragraph based on user choice
+    let message = likesJS 
+        ? `Hello, ${name}! Glad you like JavaScript!`
+        : `Hello, ${name}! Hope you learn to enjoy it!`;
+ 
+        let heading = document.querySelector(".hero-heading");
+            heading.textContent = message;
+            heading.style.fontSize = "50px"; /* Adjust size */
+            heading.style.fontWeight = "bold";
+            heading.style.textAlign = "center";
+}
+    }
+    </script>
+
+</body>
+</html>
